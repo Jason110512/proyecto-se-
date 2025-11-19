@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d0d0d0; /* Color de fondo gris claro de la imagen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color: #e0e0e0; /* Un gris ligeramente más claro para el contenedor, si se necesita */
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px; /* Ancho máximo para el formulario */
+}
+
+/* Logo Placeholder */
+.logo-placeholder {
+    margin-bottom: 25px;
+}
+
+.logo-text {
+    /* Simulación del logo con un icono y color */
+    font-size: 4rem; /* Tamaño del icono */
+    color: #4a41d2; /* Color púrpura/azul del logo de la imagen */
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    /* Para simular la forma de la imagen, usaremos un truco con clip-path o SVG si fuera más complejo */
+    /* Para esta simulación, un icono simple de Font Awesome es suficiente */
+}
+/* Estilo adicional para simular la forma angular del logo */
+.logo-text::before, .logo-text::after {
+    content: '';
+    display: block;
+    width: 60px; /* Ancho de cada "ala" */
+    height: 30px; /* Altura del punto superior */
+    background-color: #4a41d2;
+    transform: skewX(-45deg); /* Ángulo para la forma */
+    margin: 0 -10px; /* Superposición */
+}
+.logo-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0; /* Oculta el texto del icono si se usa el truco de forma */
+    height: 60px; /* Altura total del logo */
+}
+.logo-text::before {
+    transform: skewX(-45deg) translateX(-15px);
+}
+.logo-text::after {
+    transform: skewX(45deg) translateX(15px);
+}
+/* Revertir si solo quieres un icono simple: */
+.logo-placeholder .fas { /* Si quieres el icono de Font Awesome simple */
+    font-size: 4rem;
+    color: #4a41d2;
+}
+.logo-text::before, .logo-text::after {
+    content: none; /* Elimina las formas si quieres el icono simple */
+}
+
+
+h1 {
+    font-size: 2.2em;
+    color: #4a41d2; /* Color del texto "Iniciar Sesión" */
+    margin-bottom: 5px;
+}
+
+.welcome-message {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: calc(100% - 30px); /* Ancho completo menos padding */
+    padding: 12px 15px;
+    border: 1px solid #a0a0a0; /* Borde gris claro */
+    border-radius: 5px;
+    font-size: 1em;
+    outline-color: #4a41d2; /* Borde al enfocar, como en la imagen */
+}
+
+.login-button {
+    background: linear-gradient(to bottom, #6a74e0, #4a41d2); /* Gradiente azul */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.login-button:hover {
+    opacity: 0.9;
+}
+
+.links-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    font-size: 0.9em;
+}
+
+.links-section a {
+    color: #4a41d2; /* Color azul para los enlaces */
+    text-decoration: none;
+}
+
+.links-section a:hover {
+    text-decoration: underline;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.separator .line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #bbb;
+}
+
+.separator .circle {
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 15px;
+}
+
+.google-login {
+    color: #4a41d2; /* Color azul para el enlace de Google */
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.google-login:hover {
+    text-decoration: underline;
+}

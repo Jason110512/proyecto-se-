@@ -1,0 +1,289 @@
+/* Estilos Globales */
+body {
+    background-color: #63303d; 
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%; 
+    max-width: 1200px;
+    padding: 20px 20px 50px 20px; 
+}
+
+/* HEADER - Iconos superiores y Búsqueda */
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; /* Alinea verticalmente */
+    gap: 20px;
+    font-size: 1.5rem;
+    padding: 10px 0;
+}
+header div {
+    cursor: pointer;
+}
+
+/* Campo de Búsqueda */
+.search-input {
+    flex-grow: 1; /* Permite que el input crezca */
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4b232c; /* Color oscuro */
+    color: #fff;
+    font-size: 1rem;
+    max-width: 300px; 
+    margin-right: 10px;
+    display: none; /* Inicialmente oculto */
+}
+
+/* MODAL (Ventana Emergente) */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; 
+    z-index: 1000; /* Asegura que esté por encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente oscuro */
+}
+
+.modal-content {
+    background-color: #381a1f; /* Fondo oscuro del contenido del modal */
+    margin: 10% auto; /* 10% desde arriba y centrado horizontalmente */
+    padding: 20px;
+    border: 1px solid #cc0000;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+.profile-info p {
+    background-color: #4b232c;
+    padding: 8px;
+    margin: 8px 0;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.logout-button {
+    background-color: #cc0000;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* ---------------------------------------------------------------- */
+/* Estilos anteriores (sin cambios) */
+/* ---------------------------------------------------------------- */
+
+/* MAIN - Contenido principal (Video y Sidebar) */
+main {
+    display: flex;
+    gap: 20px;
+}
+
+/* SECCIÓN DEL VIDEO (Izquierda) */
+.video-section {
+    flex: 2.5; 
+    position: relative;
+    padding-bottom: 50px; 
+}
+
+/* Contenedor del reproductor de video */
+.video-player-container {
+    background-color: #000; 
+    height: 450px; 
+    position: relative; 
+    overflow: hidden; 
+}
+
+.video-player-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Detalles y Título del Video */
+.video-details {
+    margin-top: 15px;
+}
+
+.video-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+/* Botón de Suscribirse */
+.subscribe-button {
+    background-color: #cc0000;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transform: translateX(10%); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ASIDE - Sidebar (Chat y Advertencia) */
+.sidebar {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+.live-chat-header {
+    color: #000; 
+    background-color: #fff;
+    padding: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Advertencia de Video */
+.video-warning {
+    background-color: #381a1f;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    min-height: 80px;
+}
+
+#warning-text {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.warning-icon-box {
+    background-color: #ffcc00; 
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.warning-icon {
+    color: #000;
+    font-size: 2rem;
+}
+
+/* Ventana del Chat */
+.live-chat-window {
+    flex-grow: 1; 
+    min-height: 250px;
+    max-height: 500px; 
+    overflow-y: auto; 
+    background-color: #2b1418;
+    padding: 10px;
+    word-wrap: break-word; 
+    scrollbar-color: #cc0000 #444; 
+    scrollbar-width: thin;
+}
+
+.chat-message {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    line-height: 1.3;
+}
+
+.username {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Área de Input del Chat */
+.chat-input-area {
+    display: flex;
+}
+
+.chat-input-area input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 0; 
+    background-color: #381a1f;
+    color: #fff;
+}
+
+.chat-input-area input::placeholder {
+    color: #aaa;
+}
+
+.chat-input-area button {
+    background-color: #cc0000;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0; 
+    cursor: pointer;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-input-area button:hover {
+    background-color: #e60000;
+}
+
+
+/* Responsividad básica */
+@media (max-width: 800px) {
+    main {
+        flex-direction: column;
+    }
+    .video-section, .sidebar {
+        flex: none;
+        width: 100%;
+    }
+    .subscribe-button {
+        position: static; 
+        width: 100%;
+        margin-top: 15px;
+        transform: none;
+    }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación de Página de Video con Chat Interactivo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <input type="text" id="search-input" class="search-input" placeholder="Buscar en el sitio...">
+            
+            <div class="search-icon" id="search-toggle"><i class="fas fa-search"></i></div>
+            <div class="profile-icon" id="profile-open"><i class="fas fa-user"></i></div>
+            <div class="menu-icon"><i class="fas fa-ellipsis-v"></i></div>
+        </header>
+
+        <main>
+            <section class="video-section">
+                <div class="video-player-container">
+                    <iframe 
+                        width="100%" 
+                        height="100%" 
+                        src="https://www.youtube.com/embed/1di4DWNIUuw?autoplay=0&mute=0" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                
+                <div class="video-details">
+                    <h1 class="video-title">Título del video (Puedes cambiarlo manualmente si quieres)</h1>
+                </div>
+
+                <button id="subscribe-btn" class="subscribe-button">
+                    <i class="fas fa-play-circle"></i> Suscribirse
+                </button>
+            </section>
+            
+            <aside class="sidebar">
+                <div class="live-chat-header">Live chat</div>
+                
+                <div class="video-warning" id="video-warning-box">
+                    <span id="warning-text"></span>
+                    <div class="warning-icon-box">
+                        <i class="fas fa-exclamation-triangle warning-icon"></i>
+                    </div>
+                </div>
+                
+                <div class="live-chat-window" id="chat-window">
+                    <div class="chat-message"><span class="username" style="color:#5fcf1c;">EspectadorPro:</span> ¿A qué hora termina el directo?</div>
+                    <div class="chat-message"><span class="username" style="color:#9e53b6;">Tú:</span> hola</div>
+                </div>
+                
+                <div class="chat-input-area">
+                    <input type="text" id="chat-message-input" placeholder="Escribe un mensaje..." maxlength="100">
+                    <button id="send-chat-btn"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </aside>
+        </main>
+    </div>
+    
+    <div id="profile-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="profile-close">&times;</span>
+            <h2>👤 Mi Perfil de Usuario</h2>
+            <div class="profile-info">
+                <p><strong>Nombre de Usuario:</strong> GamerPro2025</p>
+                <p><strong>E-mail:</strong> usuario@simulacion.com</p>
+                <p><strong>Nivel de Suscripción:</strong> Premium (Desde 2024)</p>
+                <p><strong>Seguidores:</strong> 15,482</p>
+                <p><strong>Tiempo en el Chat:</strong> 450 horas</p>
+            </div>
+            <button class="logout-button">Cerrar Sesión</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

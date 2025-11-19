@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d0d0d0; /* Color de fondo gris claro de la imagen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.register-container {
+    background-color: #d0d0d0; /* Usa el mismo gris que el body para el efecto de fondo */
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 800px; /* Ancho máximo para el formulario */
+    text-align: center;
+}
+
+/* Título Principal */
+.main-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 50px;
+    /* Simular el color y brillo del texto */
+    color: #a0c3ff; /* Color base azul claro */
+    text-shadow: 
+        0 0 5px #70aaff, /* Sombra ligera para brillo */
+        0 0 10px #70aaff;
+}
+
+/* Filas de Inputs (3 columnas en la primera, 3 en la segunda, con ajuste de tamaño) */
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    gap: 20px; /* Espacio entre las columnas */
+}
+
+.input-group {
+    flex: 1; /* Distribuye el espacio equitativamente */
+}
+
+.input-row input {
+    width: 100%;
+    padding: 15px 10px;
+    border: 1px solid #a0c3ff; /* Borde azul claro */
+    box-shadow: 0 0 8px rgba(160, 195, 255, 0.5); /* Sombra para el efecto de brillo */
+    border-radius: 5px;
+    font-size: 1.1em;
+    box-sizing: border-box; /* Asegura que padding no afecte el ancho total */
+    text-align: center; /* Centrar el placeholder como en la imagen */
+    outline: none; /* Quitar el contorno por defecto al enfocar */
+    color: #444;
+}
+
+/* Términos y Condiciones */
+.terms-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+    font-size: 1.1em;
+}
+
+.terms-group input[type="checkbox"] {
+    /* Estilizar el checkbox */
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    accent-color: #4a41d2; /* Color de fondo del checkbox al marcarlo */
+}
+
+.terms-group label {
+    color: #4a41d2; /* Color púrpura/azul de los enlaces */
+    font-weight: bold;
+}
+
+/* Botón Registrarse */
+.register-button {
+    background: linear-gradient(to bottom, #6a74e0, #4a41d2); /* Gradiente azul */
+    color: white;
+    padding: 15px 50px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.3em;
+    font-weight: bold;
+    cursor: pointer;
+    width: 50%; /* Ocupa la mitad del espacio */
+    max-width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+}
+
+.register-button:hover {
+    background: linear-gradient(to bottom, #7a84f0, #5a51e2);
+}
+
+/* Responsividad para móviles: las columnas se apilan */
+@media (max-width: 600px) {
+    .input-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .register-button {
+        width: 80%;
+    }
+}
